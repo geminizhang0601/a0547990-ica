@@ -10,6 +10,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
         android:layout_marginBottom="50dp"
         android:orientation="vertical"
         android:padding="5dp">
@@ -19,7 +20,7 @@
             android:gravity="center"
             android:text="@string/login_title"
             android:textColor="#9900ff"
-            android:textSize="35sp" />
+            android:textSize="50sp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <LinearLayout
