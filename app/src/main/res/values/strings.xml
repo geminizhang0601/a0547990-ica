@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">a0547990 ICA Application</string>
-    <string name="username_edittext">Print the Username</string>
-    <string name="user_textview">Username</string>
-    <string name="password_edittext">Print the Password</string>
-    <string name="password_textview">Password</string>
+    <string name="login_title">Welcome</string>
+    <string name="user_textview">Username:</string>
+    <string name="password_textview">Password:</string>
+    <string name="remember_password">Remember</string>
     <string name="Sign_button">Sign in</string>
 </resources>
