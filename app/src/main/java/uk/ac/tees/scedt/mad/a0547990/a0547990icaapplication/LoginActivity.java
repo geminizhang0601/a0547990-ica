@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +16,12 @@ public class LoginActivity extends AppCompatActivity {
     private EditText EditText_Account, EditText_Password;
     private CheckBox checkBox;
     private Button Button_Login;
+    private EditText loginactivityPhonecodes;
+    private ImageView loginactivityShowcode;
+    private String realCode;
 
-        @Override
+
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.login_interface);
@@ -24,8 +29,13 @@ public class LoginActivity extends AppCompatActivity {
             EditText_Password = findViewById(R.id.EditText_Password);
             checkBox = findViewById(R.id.checkbox);
             Button_Login = findViewById(R.id.Button_Login);
+            loginactivityPhonecodes = findViewById(R.id.loginactivity_phoneCodes);
+            loginactivityShowcode = findViewById(R.id.loginactivity_showCode);
+            loginactivityShowcode.setImageBitmap(code.getInstance().createBitmap());
+            realCode = code.getInstance().getCode().toLowerCase(); //将验证码用图片的形式显示出来
 
-            SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
             String username = sharedPreferences.getString("Account", "");
             String password = sharedPreferences.getString("Password", "");
 
@@ -56,6 +66,27 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
             });
-        }
+        loginactivityShowcode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginactivityShowcode.setImageBitmap(code.getInstance().createBitmap());
+                realCode = code.getInstance().getCode().toLowerCase(); //将验证码用图片的形式显示出来
+            }
+        });
+        Button_Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phoneCode = loginactivityPhonecodes.getText().toString().toLowerCase();
+                if(phoneCode.length()==0){
+                    Toast.makeText(LoginActivity.this,"can not be empty",Toast.LENGTH_SHORT).show();
+                }
+                else if (!phoneCode.equals(realCode)){
+                    Toast.makeText(LoginActivity.this,"Error",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+    }
+
 }
 
