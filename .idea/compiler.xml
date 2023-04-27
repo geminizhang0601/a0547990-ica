@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-<<<<<<< HEAD
-    <bytecodeTargetLevel target="11" />
-=======
-    <bytecodeTargetLevel target="20" />
->>>>>>> 852cdc1 (menu3.0)
+    <bytecodeTargetLevel target="13" />
   </component>
 </project>
