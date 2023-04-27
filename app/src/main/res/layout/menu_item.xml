@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,12 +18,58 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:scaleType="centerCrop"></ImageView>
+=======
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerVertical="true"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/photo"
+        android:layout_centerVertical="true">
+>>>>>>> 852cdc1 (menu3.0)
         <TextView
             android:id="@+id/coffee_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_gravity="center_horizontal"
             android:layout_margin="5dp"
             android:textSize="16sp"></TextView>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
+=======
+            android:text="Espresso"
+            android:textSize="24sp"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/tv_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature："
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/coffee_name"
+            android:textColor="@color/purple_700"/>
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hot"
+            android:textSize="24sp"
+            android:layout_below="@+id/coffee_name"
+            android:layout_toRightOf="@+id/tv_temperature"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+</RelativeLayout>
+
+>>>>>>> 852cdc1 (menu3.0)

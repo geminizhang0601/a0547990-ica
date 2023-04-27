@@ -1,8 +1,17 @@
 <resources>
     <string name="app_name">a0547990 ICA Application</string>
+<<<<<<< HEAD
+=======
+    <string name="start_name">Welcome</string>
+>>>>>>> 852cdc1 (menu3.0)
     <string name="login_title">Welcome</string>
     <string name="user_textview">Username:</string>
     <string name="password_textview">Password:</string>
     <string name="remember_password">Remember</string>
     <string name="Sign_button">Sign in</string>
+<<<<<<< HEAD
+=======
+    <string name="menu_title">Coffee Menu</string>
+    <string name="security_code">security code</string>
+>>>>>>> 852cdc1 (menu3.0)
 </resources>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
+=======
+    xmlns:tools="http://schemas.android.com/tools"
+>>>>>>> 852cdc1 (menu3.0)
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="35dp"
@@ -10,7 +14,11 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="120dp"
+=======
+        android:layout_marginTop="40dp"
+>>>>>>> 852cdc1 (menu3.0)
         android:layout_marginBottom="50dp"
         android:orientation="vertical"
         android:padding="5dp">
@@ -33,10 +41,21 @@
             android:layout_height="wrap_content"
             android:text="@string/user_textview"
             android:textSize="24sp" />
+<<<<<<< HEAD
         <EditText
             android:id="@+id/EditText_Account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+=======
+
+        <EditText
+            android:id="@+id/EditText_Account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="text"
+            android:minHeight="48dp"
+            android:hint="print username" />
+>>>>>>> 852cdc1 (menu3.0)
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,11 +67,21 @@
             android:layout_height="wrap_content"
             android:text="@string/password_textview"
             android:textSize="24sp" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 852cdc1 (menu3.0)
         <EditText
             android:id="@+id/EditText_Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:inputType="textPassword" />
+=======
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:hint="e.g 5" />
+>>>>>>> 852cdc1 (menu3.0)
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,15 +101,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 852cdc1 (menu3.0)
         <EditText
             android:id="@+id/loginactivity_phoneCodes"
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:layout_marginLeft="50dp"
+<<<<<<< HEAD
             android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
             android:layout_weight="3"
             android:hint="security code"
+=======
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="3"
+            android:hint="@string/security_code"
+>>>>>>> 852cdc1 (menu3.0)
             android:textColor="#000000"
             android:textColorHint="#bcbcbc" />
 
@@ -90,8 +130,12 @@
             android:layout_height="63dp"
             android:layout_marginTop="10dp"
             android:layout_weight="1.5"
+<<<<<<< HEAD
             android:clickable="true"
             />
+=======
+            android:focusable="true" />
+>>>>>>> 852cdc1 (menu3.0)
     </LinearLayout>
 
     <Button

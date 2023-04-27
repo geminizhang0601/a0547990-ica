@@ -50,26 +50,45 @@ public class LoginActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     String account = EditText_Account.getText().toString();
                     String password = EditText_Password.getText().toString();
+<<<<<<< HEAD
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     if (account.equals("1923046") && password.equals("abc1923046")) {
                         if (checkBox.isChecked()) {
+=======
+                    String phoneCode = loginactivityPhonecodes.getText().toString().toLowerCase();
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    if (account.equals("a0547990") && password.equals("a0547990")) {
+                        if(phoneCode.length()==0){
+                            Toast.makeText(LoginActivity.this,"can not be empty",Toast.LENGTH_SHORT).show();}
+                        else if (!phoneCode.equals(realCode)){
+                            Toast.makeText(LoginActivity.this,"Error",Toast.LENGTH_SHORT).show();}
+                        else if (checkBox.isChecked()) {
+>>>>>>> 852cdc1 (menu3.0)
                             SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
                             SharedPreferences.Editor editor = sharedPreferences.edit();
                             editor.putString("Account", account);
                             editor.putString("Password", password);
                             editor.apply();
+<<<<<<< HEAD
                         }
                         startActivity(intent);
                         Toast.makeText(LoginActivity.this, "Successful login！", Toast.LENGTH_LONG).show();
                     } else {
                         Toast.makeText(LoginActivity.this, "User name or password is incorrect！", Toast.LENGTH_LONG).show();
                     }
+=======
+                        startActivity(intent);
+                        Toast.makeText(LoginActivity.this, "Successful login！", Toast.LENGTH_LONG).show();}
+                    } else {
+                        Toast.makeText(LoginActivity.this, "User name or password is incorrect！", Toast.LENGTH_LONG).show();}
+>>>>>>> 852cdc1 (menu3.0)
                 }
             });
         loginactivityShowcode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 loginactivityShowcode.setImageBitmap(code.getInstance().createBitmap());
+<<<<<<< HEAD
                 realCode = code.getInstance().getCode().toLowerCase(); //将验证码用图片的形式显示出来
             }
         });
@@ -84,6 +103,9 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this,"Error",Toast.LENGTH_SHORT).show();
                 }
             }
+=======
+                realCode = code.getInstance().getCode().toLowerCase();} //将验证码用图片的形式显示出来
+>>>>>>> 852cdc1 (menu3.0)
         });
 
     }
