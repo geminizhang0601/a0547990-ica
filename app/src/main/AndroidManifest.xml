@@ -10,10 +10,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.A0547990ICAApplication"
-        tools:targetApi="31">
-        <activity android:name=".WelcomeActivit" />
-
-
+        tools:targetApi="31"
+        tools:ignore="ExtraText">
         <activity android:name=".WelcomeActivit"
 
             android:exported="true"
