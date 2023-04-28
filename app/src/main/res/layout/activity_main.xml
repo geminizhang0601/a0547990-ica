@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-=======
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> 852cdc1 (menu3.0)
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    tools:context=".MainActivity">
-
-    <!-- 在这里设置启动时运行的类 -->
-    <activity
-        android:name="com.example.ryh.MainActivity"
-        android:label="@string/app_name" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-=======
     tools:context=".MainActivity"
     android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Test.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Test.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -44,4 +37,3 @@
         android:layout_height="wrap_content"/>
 
 </LinearLayout>
->>>>>>> 852cdc1 (menu3.0)

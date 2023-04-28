@@ -3,6 +3,7 @@ package uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -11,6 +12,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private SwipeRefreshLayout swipeRefresh;
     private DrawerLayout mDrawerLayout;
     private NavigationView navView;
+    private AppBarConfiguration appBarConfiguration;
+    private ActivityMainBinding binding;
     private FloatingActionButton fab;
     //    设置coffee的数据来源
     //需要适配的数据
@@ -50,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
         MyBaseAdapter mAdapter=new MyBaseAdapter();
         //设置Adapter
         listView.setAdapter(mAdapter);
+
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        setSupportActionBar(binding.toolbar);
     }
     class MyBaseAdapter extends BaseAdapter {
 
@@ -126,6 +135,13 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onRestart");
     }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.toolbar, menu);
+        return true;
+    }
+
+
 
     //    进行事件的监听 会在相应的图标被点击时被触发 弹出Toast进行显示
     @Override
@@ -150,4 +166,18 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    private class AppBarConfiguration {
+    }
+
+    private static class ActivityMainBinding {
+        public Toolbar toolbar;
+
+        public static ActivityMainBinding inflate(LayoutInflater layoutInflater) {
+            return null;
+        }
+
+        public int getRoot() {
+            return 0;
+        }
+    }
 }

@@ -11,27 +11,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.A0547990ICAApplication"
         tools:targetApi="31">
-<<<<<<< HEAD
-        <activity
-            android:name=".WelcomeActivit"
-=======
+        <activity android:name=".WelcomeActivit" />
+
 
         <activity android:name=".WelcomeActivit"
->>>>>>> 852cdc1 (menu3.0)
-            android:exported="true">
+
+            android:exported="true"
+            tools:ignore="DuplicateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
     <activity
         android:name=".MainActivity"/>
-=======
+
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity"/>
->>>>>>> 852cdc1 (menu3.0)
+        <activity android:name=".MainActivity"
+            tools:ignore="DuplicateActivity" />
     </application>
 
 </manifest>
