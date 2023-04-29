@@ -1,15 +1,30 @@
 <resources>
-    <string name="app_name">a0547990 ICA Application</string>
+    <string name="app_name" translatable="false">a0547990 ICA Application</string>
 
-    <string name="start_name">Welcome</string>
+    <string name="start_name" translatable="false">Welcome</string>
 
-    <string name="login_title">Welcome</string>
-    <string name="user_textview">Username:</string>
-    <string name="password_textview">Password:</string>
-    <string name="remember_password">Remember</string>
-    <string name="Sign_button">Sign in</string>
+    <string name="login_title" translatable="false">Welcome</string>
+    <string name="user_textview" translatable="false">Username:</string>
+    <string name="password_textview" translatable="false">Password:</string>
+    <string name="remember_password" translatable="false">Remember</string>
+    <string name="Sign_button" translatable="false">Sign in</string>
+    <string name="Register_button" translatable="false">Register</string>
+    <string name="Log_button" translatable="false">Sign in with other</string>
+    <string name="menu_title" translatable="false">Coffee Menu</string>
+    <string name="security_code" translatable="false">security code</string>
+    <string name="Espresso" translatable="false">Espresso</string>
+    <string name="T_Esp" translatable="false">Hot</string>
 
-    <string name="menu_title">Coffee Menu</string>
-    <string name="security_code">security code</string>
+
+
+    <string name="introduction_esp">Espresso:\n\tThe strongest coffee, small amount of strength, bitter, refreshing effect is great!\n\tEspresso is the strongest of all the common types of coffee.\n\tIt originated in Italy and is commonly used as a base for other coffees, such as lattes and cappuccinos.</string>
+    <string name="introduction_ame">Americano:\n\tItalian concentrated with water, more bitter, but has the effect of losing weight!\n\tLittle friends must have heard that coffee has a certain weight loss effect, but here refers to nothing added \"black coffee\"!\n\tMost espresso or instant coffee is high in sugar and you won\'t lose weight if you drink it.</string>
+    <string name="introduction_ecp">security code</string>
+    <string name="introduction_cbc">security code</string>
+    <string name="introduction_latte">security code</string>
+    <string name="introduction_mocha">security code</string>
+    <string name="introduction_cap">security code</string>
+    <string name="introduction_caramel">security code</string>
+    <string name="introduction_flat">security code</string>
 
 </resources>

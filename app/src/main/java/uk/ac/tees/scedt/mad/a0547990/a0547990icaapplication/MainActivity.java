@@ -1,9 +1,7 @@
 package uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -12,16 +10,17 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -32,8 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private SwipeRefreshLayout swipeRefresh;
     private DrawerLayout mDrawerLayout;
     private NavigationView navView;
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+
     private FloatingActionButton fab;
     //    设置coffee的数据来源
     //需要适配的数据
@@ -55,10 +53,24 @@ public class MainActivity extends AppCompatActivity {
         MyBaseAdapter mAdapter=new MyBaseAdapter();
         //设置Adapter
         listView.setAdapter(mAdapter);
+        listView.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i){
+                    case 0:
+                        Intent intent = new Intent(MainActivity.this,Espresso.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        Intent intent1 = new Intent(MainActivity.this,Americano.class);
+                        startActivity(intent1);
+                        break;
+                }
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        setSupportActionBar(binding.toolbar);
+
+            }
+        });
+
     }
     class MyBaseAdapter extends BaseAdapter {
 
@@ -95,7 +107,45 @@ public class MainActivity extends AppCompatActivity {
             holder.photo.setImageResource(icons[position]);
             return convertView;
         }
+
     }
+    private static class CoffeeInfo {
+        int coffee_name;
+        int temperature;
+        private final Class<? extends android.app.Activity> coffeeClass;
+
+        public CoffeeInfo(int coffee_name, int temperature,
+                        Class<? extends android.app.Activity> coffeeClass) {
+            this.coffee_name = coffee_name;
+            this.temperature = temperature;
+            this.coffeeClass = coffeeClass;
+        }
+    }
+
+    //    进行事件的监听 会在相应的图标被点击时被触发 弹出Toast进行显示
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                break;
+            case R.id.backup:
+                Uri uri = Uri.parse("tel:40020547990");
+                Intent intent = new Intent(Intent.ACTION_DIAL, uri);
+                startActivity(intent);
+                break;
+            case R.id.delete:
+                Toast.makeText(this, "You clicked Delete", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.settings:
+                Toast.makeText(this, "You clicked Setting", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+        }
+        return true;
+    }
+    // 第一步：对listView添加监听器
+
     class ViewHolder{
         TextView coffee_name;
         TextView temperature;
@@ -143,41 +193,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    //    进行事件的监听 会在相应的图标被点击时被触发 弹出Toast进行显示
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                mDrawerLayout.openDrawer(GravityCompat.START);
-                break;
-            case R.id.backup:
-                Uri uri = Uri.parse("tel:40020547990");
-                Intent intent = new Intent(Intent.ACTION_DIAL, uri);
-                startActivity(intent);
-                break;
-            case R.id.delete:
-                Toast.makeText(this, "You clicked Delete", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.settings:
-                Toast.makeText(this, "You clicked Setting", Toast.LENGTH_SHORT).show();
-                break;
-            default:
-        }
-        return true;
-    }
 
-    private class AppBarConfiguration {
-    }
 
-    private static class ActivityMainBinding {
-        public Toolbar toolbar;
 
-        public static ActivityMainBinding inflate(LayoutInflater layoutInflater) {
-            return null;
-        }
 
-        public int getRoot() {
-            return 0;
-        }
-    }
+
+
+
 }
