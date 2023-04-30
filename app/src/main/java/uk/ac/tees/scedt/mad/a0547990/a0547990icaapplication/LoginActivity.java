@@ -12,10 +12,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.javabean.User;
+
 public class LoginActivity extends AppCompatActivity {
     private EditText EditText_Account, EditText_Password;
+    private MYsqliteopenhelper mYsqliteopenhelper;
     private CheckBox checkBox;
-    private Button Button_Login;
+    private Button Button_Login,Button_Register;
     private EditText loginactivityPhonecodes;
     private ImageView loginactivityShowcode;
     private String realCode;
@@ -25,10 +28,12 @@ public class LoginActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.login_interface);
+            mYsqliteopenhelper=new MYsqliteopenhelper(this);
             EditText_Account = findViewById(R.id.EditText_Account);
             EditText_Password = findViewById(R.id.EditText_Password);
             checkBox = findViewById(R.id.checkbox);
             Button_Login = findViewById(R.id.Button_Login);
+            Button_Register= findViewById(R.id.Button_Register);
             loginactivityPhonecodes = findViewById(R.id.loginactivity_phoneCodes);
             loginactivityShowcode = findViewById(R.id.loginactivity_showCode);
             loginactivityShowcode.setImageBitmap(code.getInstance().createBitmap());
@@ -45,6 +50,12 @@ public class LoginActivity extends AppCompatActivity {
                 checkBox.setChecked(true);
             }
 
+            Button_Register.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v){
+                    Intent intent1 = new Intent(LoginActivity.this, Register.class);
+                    startActivity(intent1);
+                }
+            });
             Button_Login.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -52,8 +63,9 @@ public class LoginActivity extends AppCompatActivity {
                     String password = EditText_Password.getText().toString();
 
                     String phoneCode = loginactivityPhonecodes.getText().toString().toLowerCase();
+                    boolean login = mYsqliteopenhelper.login(account, password);
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    if (account.equals("a0547990") && password.equals("a0547990")) {
+                    if (login) {
                         if(phoneCode.length()==0){
                             Toast.makeText(LoginActivity.this,"can not be empty",Toast.LENGTH_SHORT).show();}
                         else if (!phoneCode.equals(realCode)){
@@ -82,5 +94,8 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+
+
 }
+
 

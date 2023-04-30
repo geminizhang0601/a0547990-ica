@@ -29,6 +29,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity"
             tools:ignore="DuplicateActivity" />
+        <activity android:name=".Register"/>
         <activity android:name=".Espresso"/>
         <activity android:name=".Americano"/>
     </application>
