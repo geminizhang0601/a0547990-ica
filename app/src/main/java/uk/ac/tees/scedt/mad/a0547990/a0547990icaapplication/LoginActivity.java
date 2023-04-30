@@ -10,7 +10,18 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.firebase.ui.auth.AuthUI;
+import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract;
+import com.firebase.ui.auth.IdpResponse;
+import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import java.util.Arrays;
 
 import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.javabean.User;
 
@@ -18,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText EditText_Account, EditText_Password;
     private MYsqliteopenhelper mYsqliteopenhelper;
     private CheckBox checkBox;
-    private Button Button_Login,Button_Register;
+    private Button Button_Login,Button_Register,Button_Log;
     private EditText loginactivityPhonecodes;
     private ImageView loginactivityShowcode;
     private String realCode;
@@ -34,10 +45,12 @@ public class LoginActivity extends AppCompatActivity {
             checkBox = findViewById(R.id.checkbox);
             Button_Login = findViewById(R.id.Button_Login);
             Button_Register= findViewById(R.id.Button_Register);
+            Button_Log=findViewById(R.id.Button_Log);
             loginactivityPhonecodes = findViewById(R.id.loginactivity_phoneCodes);
             loginactivityShowcode = findViewById(R.id.loginactivity_showCode);
             loginactivityShowcode.setImageBitmap(code.getInstance().createBitmap());
             realCode = code.getInstance().getCode().toLowerCase(); //将验证码用图片的形式显示出来
+
 
 
         SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
@@ -92,6 +105,41 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        Button_Log.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+                SignLaunch.launch(
+                        AuthUI.getInstance()
+                                .createSignInIntentBuilder()
+                                //setLogo(R.drawable)图标
+                                .setAvailableProviders(Arrays.asList(
+                                        new AuthUI.IdpConfig.EmailBuilder().build(),
+                                        new AuthUI.IdpConfig.PhoneBuilder().setDefaultCountryIso("gb").build(),
+                                        new AuthUI.IdpConfig.GoogleBuilder().build()
+
+                                ))
+                                .build()
+
+                );
+            }
+        });
+
+    }
+    private final ActivityResultLauncher<Intent> SignLaunch=registerForActivityResult(
+            new FirebaseAuthUIActivityResultContract(),
+            new ActivityResultCallback<FirebaseAuthUIAuthenticationResult>() {
+                @Override
+                public void onActivityResult(FirebaseAuthUIAuthenticationResult result) {
+                    onSignInResult(result);
+                }
+            }
+    );
+    private void onSignInResult(FirebaseAuthUIAuthenticationResult result){
+        IdpResponse response=result.getIdpResponse();
+        if (result.getResultCode()==RESULT_OK){
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+
+        }else{}
     }
 
 

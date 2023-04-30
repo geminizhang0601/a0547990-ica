@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 
 import android.content.Intent;
 import android.net.Uri;
@@ -28,7 +28,6 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "Coffee";
-    private SwipeRefreshLayout swipeRefresh;
     private DrawerLayout mDrawerLayout;
     private NavigationView navView;
 

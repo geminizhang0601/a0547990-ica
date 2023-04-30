@@ -124,7 +124,7 @@
         android:layout_marginLeft="20dp"
         android:text="@string/Register_button" />
     <Button
-        android:id="@+id/Button_Login2"
+        android:id="@+id/Button_Log"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
