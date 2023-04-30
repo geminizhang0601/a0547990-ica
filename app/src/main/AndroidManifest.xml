@@ -31,8 +31,16 @@
         <activity android:name=".MainActivity"
             tools:ignore="DuplicateActivity" />
         <activity android:name=".Register"/>
-        <activity android:name=".Espresso"/>
-        <activity android:name=".Americano"/>
+        <activity android:name=".Coffee.Espresso"/>
+        <activity android:name=".Coffee.Americano"/>
+        <activity android:name=".Coffee.Espressocp"/>
+        <activity android:name=".Coffee.Coldbrew"/>
+        <activity android:name=".Coffee.Latte"/>
+        <activity android:name=".Coffee.Mocha"/>
+        <activity android:name=".Coffee.Cap"/>
+        <activity android:name=".Coffee.Caramel"/>
+        <activity android:name=".Coffee.Flat"/>
+
     </application>
 
 </manifest>

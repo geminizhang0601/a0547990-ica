@@ -25,6 +25,16 @@ import android.widget.AdapterView.OnItemClickListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
+import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Americano;
+import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Cap;
+import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Caramel;
+import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Coldbrew;
+import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Espresso;
+import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Espressocp;
+import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Flat;
+import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Latte;
+import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Mocha;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "Coffee";
@@ -57,12 +67,40 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i){
                     case 0:
-                        Intent intent = new Intent(MainActivity.this,Espresso.class);
+                        Intent intent = new Intent(MainActivity.this, Espresso.class);
                         startActivity(intent);
                         break;
                     case 1:
-                        Intent intent1 = new Intent(MainActivity.this,Americano.class);
+                        Intent intent1 = new Intent(MainActivity.this, Americano.class);
                         startActivity(intent1);
+                        break;
+                    case 2:
+                        Intent intent2 = new Intent(MainActivity.this, Espressocp.class);
+                        startActivity(intent2);
+                        break;
+                    case 3:
+                        Intent intent3 = new Intent(MainActivity.this, Coldbrew.class);
+                        startActivity(intent3);
+                        break;
+                    case 4:
+                        Intent intent4 = new Intent(MainActivity.this, Latte.class);
+                        startActivity(intent4);
+                        break;
+                    case 5:
+                        Intent intent5 = new Intent(MainActivity.this, Mocha.class);
+                        startActivity(intent5);
+                        break;
+                    case 6:
+                        Intent intent6 = new Intent(MainActivity.this, Cap.class);
+                        startActivity(intent6);
+                        break;
+                    case 7:
+                        Intent intent7 = new Intent(MainActivity.this, Caramel.class);
+                        startActivity(intent7);
+                        break;
+                    case 8:
+                        Intent intent8 = new Intent(MainActivity.this, Flat.class);
+                        startActivity(intent8);
                         break;
                 }
 
