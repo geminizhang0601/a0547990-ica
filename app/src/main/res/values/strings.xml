@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">a0547990 ICA Application</string>
 
-    <string name="start_name" translatable="false">Welcome</string>
+    <string name="start_name" translatable="false">Welcome\n\nCoffee Category App</string>
 
     <string name="login_title" translatable="false">Welcome</string>
     <string name="user_textview" translatable="false">Username:</string>

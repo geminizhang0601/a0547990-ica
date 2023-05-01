@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.comment.Comment;
 import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.javabean.User;
 
 public class MYsqliteopenhelper extends SQLiteOpenHelper {

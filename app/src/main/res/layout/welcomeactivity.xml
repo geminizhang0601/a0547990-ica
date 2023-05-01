@@ -6,9 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".WelcomeActivit"
     android:background="@drawable/start">
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:rotationX="6"
+        android:rotationY="2">
 
         <TextView
             android:id="@+id/textView"
@@ -17,7 +20,7 @@
             android:layout_marginTop="90dp"
             android:text="@string/start_name"
             android:textAlignment="center"
-            android:textColor="#673AB7"
+            android:textColor="@color/purple_500"
             android:textSize="60sp"
             android:textStyle="bold|italic" />
     </RelativeLayout>

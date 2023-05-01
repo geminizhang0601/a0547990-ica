@@ -1,15 +1,15 @@
 package uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.comment;
 
-public class Comment {
+public class CommentInfo {
 
         String name; //评论者
         String content; //评论内容
 
-        public Comment(){
+        public CommentInfo(){
 
         }
 
-        public Comment(String name, String content){
+        public CommentInfo(String name, String content){
             this.name = name;
             this.content = content;
         }
