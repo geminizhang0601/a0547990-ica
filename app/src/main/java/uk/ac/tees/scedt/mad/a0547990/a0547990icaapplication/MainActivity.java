@@ -34,6 +34,7 @@ import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Espressocp;
 import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Flat;
 import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Latte;
 import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.Coffee.Mocha;
+import uk.ac.tees.scedt.mad.a0547990.a0547990icaapplication.comment.Commentmain;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -166,6 +167,10 @@ public class MainActivity extends AppCompatActivity {
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 break;
+            case R.id.comment:
+                Intent intent0 = new Intent(MainActivity.this, Commentmain.class);
+                startActivity(intent0);
+                break;
             case R.id.backup:
                 Uri uri = Uri.parse("tel:40020547990");
                 Intent intent = new Intent(Intent.ACTION_DIAL, uri);
@@ -227,14 +232,6 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.toolbar, menu);
         return true;
     }
-
-
-
-
-
-
-
-
 
 
 }

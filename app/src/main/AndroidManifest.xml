@@ -40,6 +40,8 @@
         <activity android:name=".Coffee.Cap"/>
         <activity android:name=".Coffee.Caramel"/>
         <activity android:name=".Coffee.Flat"/>
+        <activity android:name=".comment.Commentmain"/>
+        <activity android:name=".comment.Comment"/>
 
     </application>
 

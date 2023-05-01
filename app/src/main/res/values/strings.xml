@@ -14,17 +14,37 @@
     <string name="security_code" translatable="false">security code</string>
     <string name="Espresso" translatable="false">Espresso</string>
     <string name="T_Esp" translatable="false">Hot</string>
-
-
-
-    <string name="introduction_esp">Espresso:\n\tThe strongest coffee, small amount of strength, bitter, refreshing effect is great!\n\tEspresso is the strongest of all the common types of coffee.\n\tIt originated in Italy and is commonly used as a base for other coffees, such as lattes and cappuccinos.</string>
-    <string name="introduction_ame">Americano:\n\tItalian concentrated with water, more bitter, but has the effect of losing weight!\n\tLittle friends must have heard that coffee has a certain weight loss effect, but here refers to nothing added \"black coffee\"!\n\tMost espresso or instant coffee is high in sugar and you won\'t lose weight if you drink it.</string>
-    <string name="introduction_ecp">security code</string>
-    <string name="introduction_cb">security code</string>
-    <string name="introduction_latte">security code</string>
-    <string name="introduction_mocha">security code</string>
-    <string name="introduction_cap">security code</string>
-    <string name="introduction_caramel">security code</string>
-    <string name="introduction_flat">security code</string>
+    <string name="introduction_esp">Espresso:\n\tThe strongest coffee, small amount of strength, bitter, refreshing effect is great!\n\tEspresso is the strongest of all the common types of coffee.\n\tIt originated in Italy and is commonly used as a base for other coffees, such as lattes and cappuccinos.
+    \n\tEspresso is made directly by a coffee machine. It is the coffee liquid that comes out after the ground coffee is flushed through the water at about 90\℃ with the help of high pressure. Usually the unit is \"shot\", which can be called \"fen\" in Chinese.\n\n\n\n</string>
+    <string name="introduction_ame">Americano:\n\tItalian concentrated with water, more bitter, but has the effect of losing weight!\n\tLittle friends must have heard that coffee has a certain weight loss effect, but here refers to nothing added \"black coffee\"!\n\tMost espresso or instant coffee is high in sugar and you won\'t lose weight if you drink it.
+    \n\tWhat we call \"black coffee\" is Americano. The American way is very simple, it\'s also Italian concentrate as a base, and then dilute it with water. Basically, it\'s concentrated with water, no sugar or milk, and perfectly retains the original taste of coffee, which is bitter and high in caffeine.\n\n\n\n</string>
+    <string name="introduction_ecp">Espresso Con Panna: \n\tCoffee with whipped cream is good but a little high in calories.
+        \n\tCambolan is espresso topped with whipped cream, Panna means cream in Italian, Con means \"and\", so it translates to \"condensed and creamy\" in Chinese.
+        It looks like ice cream, but the cream is high in calories, so dieters should avoid it.\n\n\n\n</string>
+    <string name="introduction_cb">Cold Brew Coffee: \n\tSuper long and slow extraction, smooth taste, fashion and taste!
+        \n\tNext, let\'s introduce cold brew coffee, which is very popular in recent years.
+        \n\tCold brew, as the name suggests, is coffee that is extracted with cold water. Usually, whether it is espresso made by a coffee machine or hand-brewed coffee made by ourselves, the coffee powder is extracted with hot water and the extraction time is short.
+        \n\tCold brew coffee, on the other hand, uses room temperature or cold water for extraction, but the extraction time can be up to 12 hours, which is a slow extraction. For such a long time, the coffee powder is soaked in water, so that the substance contained in the coffee is fully released, and the coffee taste is more intense than American style.
+        \n\tWhen drinking cold brew, it is usually diluted with water and then added with ice. The smooth taste is unforgettable, but it is not as bitter as the American style. It is unique in coffee and has its unique charm, which has attracted a large number of coffee fans around the world!
+\n\n\n\n</string>
+    <string name="introduction_latte">Coffee Latte: \n\tLatte with milk has a strong milky flavor and is preferred for breakfast.
+        \n\tIt\'s made from Italian concentrate, and it\'s made with steamed milk, and it smells delicious. Some senior baristas will also pull out a lot of beautiful patterns on the top, so the latte is popular among women.
+        \n\tCompared to the softness of a cappuccino, lattes are less frothy and more creamy, making them ideal for breakfast.
+        \n\tI\'ve heard many people complain about the bland taste of Starbucks lattes and the illusion that they\'re always drinking pure milk. So Latte, the Italian word for milk, latte means milk. If you ever visit Italy, order a Latte at a local cafe and be sure to say the full name. If you say \"Caffe Latte\", the barista will literally serve you a glass of milk.
+\n\n\n\n</string>
+    <string name="introduction_mocha">caffè mocha,also called mocaccino:
+        \n\tMocha is a chocolate-flavoured warm beverage that is a variant of a caffè latte, commonly served in a glass rather than a mug. Other commonly used spellings are mochaccino and also mochachino.
+        \n\tThe name is derived from the city of Mokha, Yemen, which was one of the centres of early coffee trade.Like latte, the name is commonly shortened to just mocha.\n\n\n\n</string>
+    <string name="introduction_cap">Cappuccino: Italian concentrate with thick foam, dense and smooth.
+        \n\tCappuccinos and lattes are basically similar in composition, with espresso as the base and foaming milk added, but the difference is the thickness of the foam.
+        \n\tCappuccino has more and thicker foam. The coffee flavor is lighter, but the milky flavor is strong and softer than the latte. If you like soft, frothy drinks, then cappuccino is your choice.
+\n\n\n\n</string>
+    <string name="introduction_caramel">Caramel Macchiato: \n\tVanilla syrup and caramel sauce are added to your coffee. Don\'t let caramel Macchiato drink anything sweet!
+        \n\tThe espresso base is mixed with vanilla-flavored syrup, steamed milk and milk foam, and then topped with caramel sauce, which is quite high in taste and appearance. \n\tCaramel Macchiato is one of the better coffees. It has a sweet taste, but it is high in sugar, so dieters don\'t drink it.
+\n\n\n\n</string>
+    <string name="introduction_flat">Flat White: \n\tSoft and smooth, full of aroma, stomach friendly!
+        \n\tAustralian white coffee, also known as \"white coffee\", was born in the 1980s and is highly respected by coffee lovers all over the world. Its origin is still unclear, some say it comes from Australia, while others think it comes from New Zealand.
+        \n\tCompared to lattes, white coffee has a much stronger coffee flavor, while milk flavor is relatively light, and the taste is smoother than lattes. I should also mention that there is an instant coffee in Malaysia called \"White coffee\", but it is not the same as a Flat White coffee!
+\n\n\n\n</string>
 
 </resources>
